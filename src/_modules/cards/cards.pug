@@ -1,0 +1,21 @@
+mixin cards(spec)
+  .cards
+    each val in spec
+      .cards__container
+        div(class='cards__icon-' + val.name)
+          image(class='cards__icon-img' src=val.image alt=val.title )
+        h3.cards__title #{val.title}
+        p.cards__text #{val.text}
+        a(class='cards__link' href='#') Learn more
+
+mixin twitterCards(spec)
+  .twitter
+    ul.twitter__feed
+      each val in spec
+        li.twitter__card
+          .twitter__user
+            image(class='twitter__img' src=`images/${val.userPhoto}` alt=`Photo of ${val.userName}`)
+            p.twitter__name #{userName}
+            img(class='twitter__icon' alt='Twitter' src='images/social-twitter.svg')
+          p.twitter__text #{val.tweetText}
+          p.twitter__date #{val.tweetDate}

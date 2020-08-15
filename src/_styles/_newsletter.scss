@@ -1,0 +1,70 @@
+.newsletter {
+  @include mobile {
+    margin: 45px 0;
+  }
+
+  &--center {
+
+    & .newsletter__label {
+      left: 5rem;
+    }
+
+    & .newsletter__input {
+      width: 70%;
+    }
+
+    & .newsletter__button {
+      right: 10%;
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+    @include desktop {
+      width: 80%;
+    }
+
+    &--center {
+      margin: 0 auto;
+    }
+  }
+
+  &__input {
+    @include input-dropshadow();
+    border: 1px solid $gray-border;
+    height: 50px;
+    padding: 20px 110px 10px 10px;
+    width: 100%;
+
+    &::placeholder {
+      color: $gray;
+      font-weight: $font-weight-light;
+    }
+  }
+
+  &__label {
+    color: $blue;
+    cursor: text;
+    left: .75rem;
+    font-size: .75rem;
+    font-weight: $font-weight-medium;
+    position: absolute;
+    top: 8px;
+  }
+
+  &__button {
+    @include input-dropshadow();
+    @include button($blue, $white, $blue-lighter, $white);
+    align-items: center;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    font-size: .9rem;
+    font-weight: $font-weight-medium;
+    height: 50px;
+    padding: 0 20px;
+    position: absolute;
+    right: 0;
+  }
+}

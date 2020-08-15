@@ -1,0 +1,50 @@
+.square-orange {
+  position: absolute;
+  z-index: -1;
+
+  @include mobile {
+    @include square(300px, 40px, 135deg, #f2c314, #fc3832, 65deg);
+    right: -150px;
+    top: 600px;
+  }
+
+  @include desktop {
+    @include square(550px, 40px, 135deg, #f2c314, #fc3832, 65deg);
+    right: -260px;
+    top: -100px;
+  }
+}
+
+.square-dark-blue {
+  position: absolute;
+  z-index: -1;
+
+  @include mobile {
+    @include square(300px, 40px, 135deg, #9c09db, #1c0fd7, 45deg);
+    right: -175px;
+    top: 600px;
+  }
+
+  @include desktop {
+    @include square(550px, 40px, 135deg, #9c09db, #1c0fd7, 45deg);
+    right: -260px;
+    top: -100px;
+  }
+}
+
+.square-blue {
+  position: absolute;
+  z-index: -1;
+
+  @include mobile {
+    @include square(150px, 20px, 135deg, #32fbfc, #3214f2, 45deg);
+    left: -100px;
+    top: 1040px;
+  }
+
+  @include desktop {
+    @include square(300px, 40px, 135deg, #32fbfc, #3214f2, 45deg);
+    left: -230px;
+    top: 660px;
+  }
+}

@@ -1,0 +1,94 @@
+$link-height: 60px;
+
+.tabs {
+
+  @include desktop {
+    position: relative;
+  }
+
+  &__list {
+    @include unstyled-list();
+  }
+
+  &__item {
+    position: relative;
+
+    @include desktop {
+      width: 70%;
+    }
+  }
+
+  @include mobile {
+
+    &__item:nth-child(1) {
+
+      & .slide {
+        top: calc(#{$link-height} * 3);
+      }
+    }
+
+    &__item:nth-child(2) {
+
+      & .slide {
+        top: calc(#{$link-height} * 2);
+      }
+    }
+
+    &__item:nth-child(3) {
+
+      & .slide {
+        top: calc(#{$link-height} * 1);
+      }
+    }
+  }
+
+  @include desktop {
+
+    &__item:nth-child(1) {
+
+      & .slide {
+        top: calc(-520px + #{$link-height} * 3);
+      }
+    }
+
+    &__item:nth-child(2) {
+
+      & .slide {
+        top: calc(-520px + #{$link-height} * 2);
+      }
+    }
+
+    &__item:nth-child(3) {
+
+      & .slide {
+        top: calc(-520px + #{$link-height} * 1);
+      }
+    }
+  }
+
+  &__link {
+    color: $gray;
+    display: block;
+    font-weight: $font-weight-medium;
+    height: 60px;
+    padding: 20px 20px 20px 60px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &[type=radio]:checked + label {
+      @include tab-dropshadow();
+      color: $black;
+
+      & ~ .slide .slide__item {
+        transform: translateX(0);
+        transition: transform 2s;
+      }
+    }
+  }
+}

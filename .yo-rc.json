@@ -1,0 +1,12 @@
+{
+  "generator-yeogurt": {
+    "config": {
+      "projectName": "fed-pug-boilerplate",
+      "htmlOption": "pug",
+      "cssOption": "sass",
+      "sassSyntax": "scss",
+      "testFramework": "jasmine"
+    },
+    "version": "3.1.2"
+  }
+}

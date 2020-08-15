@@ -1,0 +1,76 @@
+.menu {
+  background-color: $white;
+  border-bottom: 1px solid $gray;
+  height: $default-menu-height;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
+
+  &__inner {
+    @include display-flex-between();
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    max-width: $max-width-inner;
+  }
+
+  &__logo {
+    font-size: 1rem;
+    font-weight: $font-weight-medium;
+    width: 33.3366%;
+
+    &--blue {
+      color: $blue;
+    }
+  }
+
+  &__topics {
+    display: none;
+
+    @include desktop {
+      @include display-flex-between();
+      @include unstyled-list();
+      align-items: center;
+      font-size: .875rem;
+      width: 33.3366%;
+    }
+  }
+
+  &__login {
+
+    @include mobile {
+      flex-grow: 2;
+    }
+
+    @include display-flex-between();
+    @include unstyled-list();
+    align-items: center;
+    font-size: .875rem;
+    font-weight: $font-weight-medium;
+    justify-content: flex-end;
+    width: 33.3366%;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    color: $black;
+  }
+
+  &__button {
+    @include button($blue, $white, $blue-lighter, $white);
+    @include button-dropshadow();
+    border-radius: 4px;
+    cursor: pointer;;
+    margin-left: 20px;
+    padding: 5px 10px;
+  }
+}

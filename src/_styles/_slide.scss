@@ -1,0 +1,54 @@
+.slide {
+  position: absolute;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  @include desktop {
+    left: 160%;
+    top: -600%;
+  }
+
+  &__item {
+    cursor: pointer;
+    transform: translateX(300%);
+    transition: transform 2s;
+    width: 100%;
+
+    @include mobile {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__img {
+    @include mobile {
+      display: block;
+      margin: 45px auto 0;
+      max-width: 100%;
+    }
+
+    @include desktop {
+      bottom: -100px;
+      max-height: 520px;
+      position: relative;
+      left: 0;
+    }
+
+    &--right {
+      @include mobile {
+        display: none;
+      }
+
+      @include desktop {
+        @include image-dropshadow();
+        max-height: 500px;
+        position: absolute;
+        left: 60px;
+        top: -45px;
+        z-index: -1;
+      }
+    }
+  }
+}

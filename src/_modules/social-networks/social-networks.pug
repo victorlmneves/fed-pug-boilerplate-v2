@@ -1,0 +1,5 @@
+mixin socialNetworks(values)
+  ul.social-networks
+    each val in values
+      li.social-networks__item
+        +linkWithImage(val.name, val.css, val.link, val.image)

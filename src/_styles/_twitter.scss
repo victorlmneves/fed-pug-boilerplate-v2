@@ -1,0 +1,91 @@
+.twitter {
+  overflow: hidden;
+
+  &__feed {
+    font-size: .9rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    @include mobile {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      width: 100vw;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    @include desktop {
+      column-count: 2;
+      column-gap: 20px;
+    }
+  }
+
+  &__card {
+    background-color: $black-lighter;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    width: 260px;
+
+    @include mobile {
+      margin-right: 20px;
+      scroll-snap-align: start;
+      width: 260px;
+    }
+  }
+
+  &__user {
+    @include mobile {
+      width: 220px;
+    }
+
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &__img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+
+  &__name {
+    color: $white;
+    flex-grow: 2;
+    padding-left: 10px;
+  }
+
+  &__icon {
+    filter: contrast(.5);
+  }
+
+  &__text {
+    @include mobile {
+      width: 220px;
+    }
+
+    color: $white;
+    font-size: .9rem;
+    line-height: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    @include mobile {
+      width: 220px;
+    }
+
+    color: $gray;
+  }
+}

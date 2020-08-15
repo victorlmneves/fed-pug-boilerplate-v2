@@ -1,0 +1,43 @@
+body {
+  background: $white;
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include mobile() {
+    font-size: $default-font-size-mobile;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $max-width;
+  overflow: hidden;
+  position: relative;
+
+  @include mobile {
+    overflow: hidden;
+    max-width: $max-width-mobile;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  @include desktop {
+    text-align: center;
+  }
+}

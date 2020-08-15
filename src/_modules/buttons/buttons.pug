@@ -1,0 +1,10 @@
+mixin primaryButton(text, css)
+	button.button(class=css)
+		| #{text}
+
+mixin menuButton(text, css)
+	button.button(class=css)
+		| #{text}
+
+mixin back-to-top()
+	a.back-to-top(href='#top')

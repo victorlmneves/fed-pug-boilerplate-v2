@@ -1,0 +1,246 @@
+.section {
+  position: relative;
+
+  @include desktop {
+    @include display-flex-between();
+    align-items: center;
+    margin: 0 auto 50px;
+    max-width: $max-width;
+    //min-height: calc(100vh - #{$default-menu-height});
+    overflow: hidden;
+  }
+
+  &--hero {
+    padding-top: 80px;
+    min-height: 800px;
+
+    @include desktop {
+      padding-top: $default-menu-height;
+    }
+  }
+
+  &--features {
+
+    @include mobile {
+      margin-top: 90px;
+    }
+
+    @include desktop {
+      text-align: center;
+    }
+  }
+
+  &--apps {
+    @include mobile {
+      height: 1040px;
+      margin-top: 60px;
+    }
+
+    @include desktop {
+      height: 660px;
+    }
+
+    & .section__content {
+      @include desktop {
+        width: 45%;
+      }
+    }
+  }
+
+  &--twitter {
+    @include mobile {
+      margin-top: 30px;
+      margin-bottom: 60px;
+      padding-top: 60px;
+    }
+
+    background-color: $black;
+    max-height: 780px;
+    max-width: 100%;
+
+    & .section__title,
+    & .section__text,
+    & .section__topic {
+      color: $white;
+    }
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 15px;
+
+    @include desktop {
+      max-width: $max-width-inner;
+    }
+
+    &--row {
+      @include mobile {
+        @include flex-vertical-align();
+      }
+
+      @include desktop {
+        @include display-flex-between();
+        align-items: center;
+      }
+    }
+
+    &--features {
+      @include desktop {
+        @include flex-vertical-align();
+      }
+    }
+
+    &--get-started {
+        @include flex-vertical-align();
+    }
+
+    &--twitter {
+      left: 50%;
+      position: absolute;
+      top: 0;
+      transform: translate(-50%);
+      width: 1100px;
+    }
+  }
+
+  &__topic {
+    font-size: 1rem;
+    font-weight: $font-weight-light;
+
+    &--get-started {
+      @include mobile {
+        text-align: left;
+        width: 100%;
+      }
+    }
+
+    &--left {
+      @include desktop {
+        text-align: left;
+      }
+    }
+  }
+
+  &__content {
+    display: inline-block;
+    vertical-align: top;
+
+    @include desktop {
+      width: 60%;
+    }
+
+    &--left {
+      @include desktop {
+        width: 50%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: $font-weight-bold;
+    line-height: 2.2rem;
+    margin-top: 0;
+
+    @include desktop {
+      font-size: 3rem;
+      line-height: 3rem;
+      margin-bottom: 20px;
+    }
+
+    &--center {
+      @include desktop {
+        font-size: 4rem;
+        line-height: 4rem;
+        text-align: center;
+      }
+    }
+
+    &--features {
+
+      @include desktop {
+        font-size: 3.8rem;
+        line-height: 3.8rem;
+      }
+    }
+
+    &--get-started {
+      @include desktop {
+        font-size: 3.8rem;
+        line-height: 3.8rem;
+        text-align: center;
+      }
+    }
+
+    &--hero {
+      @include desktop {
+        font-size: 4.4rem;
+        line-height: 4.4rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: 30px;
+    margin-top: 0;
+
+    @include desktop {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      word-spacing: .15rem;
+    }
+  }
+
+  &__img {
+    @include mobile {
+      width: 100%;
+    }
+
+    @include desktop {
+      height: 680px;
+      padding-right: 5%;
+    }
+
+    // &--small {
+    //   @include mobile {
+    //     display: block;
+    //     margin: 45px auto 0;
+    //     height: 560px;
+    //   }
+    //
+    //   @include desktop {
+    //     bottom: -80px;
+    //     max-height: 520px;
+    //     position: relative;
+    //     right: 180px;
+    //   }
+    // }
+    //
+    // &--outside {
+    //   @include mobile {
+    //     display: none;
+    //   }
+    //
+    //   @include desktop {
+    //     @include image-dropshadow();
+    //     max-height: 500px;
+    //     position: absolute;
+    //     right: -230px;
+    //     top: 0px;
+    //     z-index: -1;
+    //   }
+    // }
+  }
+
+  &__button {
+    @include button($blue, $white, $blue-lighter, $white);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 100%;
+    font-weight: $font-weight-medium;
+  }
+}

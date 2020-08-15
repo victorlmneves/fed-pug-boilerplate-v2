@@ -1,0 +1,107 @@
+@mixin button-dropshadow {
+  box-shadow: 0 2px  4px rgba(50,10,170,.3);
+}
+
+@mixin tab-dropshadow {
+  box-shadow: 0 2px  4px rgba(0,0,0,.1);
+}
+
+@mixin input-dropshadow {
+  box-shadow: 0 5px  10px rgba(0,0,0,.1);
+}
+
+@mixin image-dropshadow {
+  box-shadow: 0 3px  6px rgba(0,0,0,.1);
+}
+
+@mixin square($dimension, $border-radius, $degrees, $color-from, $color-to, $rotation) {
+  background-image: linear-gradient($degrees, $color-from, $color-to);
+  border-radius: $border-radius;
+  box-shadow: 0 6px  12px rgba(0,0,0,.5);
+  height: $dimension;
+  opacity: .9;
+  transform: rotate($rotation);
+  width: $dimension;
+}
+
+@mixin button($bg-color, $font-color, $hover-color, $hover-font-color) {
+	background-color: $bg-color;
+  border: 0;
+	color: $font-color;
+
+	&:hover,
+  &:focus {
+		background-color: $hover-color;
+		color: $hover-font-color;
+		text-decoration: none;
+	}
+}
+
+@mixin unstyled-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clearfix {
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin display-flex-start {
+  display: flex;
+	justify-content: flex-start;
+}
+
+@mixin display-flex-between {
+  display: flex;
+	justify-content: space-between;
+}
+
+@mixin display-flex-end {
+  display: flex;
+	justify-content: flex-end;
+}
+
+@mixin display-flex-center {
+  display: flex;
+	justify-content: center;
+}
+
+@mixin flex-vertical-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin custom-breakpoint ($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

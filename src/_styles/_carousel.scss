@@ -1,0 +1,92 @@
+$tile-width: 220px;
+$tile-width-mobile: 200px;
+$tile-height: (220px / (10/16));
+$tile-height-mobile: (200px / (10/16));
+$iconSize: 50px;
+
+.carousel {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  min-height: 40vh;
+  position: relative;
+  width: 100%;
+
+  @include desktop {
+    height: 50vh;
+    margin-bottom: 60px;
+  }
+
+  &__inner {
+    font-size: 0;
+    min-height: 40vh;
+    white-space: nowrap;
+
+    @include desktop {
+      height: 100%;
+    }
+  }
+
+  &__list {
+    @include unstyled-list();
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    animation: testimonials-x 20s linear infinite;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $white;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+
+  &__item {
+    margin-right: 30px;
+    font-size: 20px;
+    height: $tile-height-mobile;
+
+    width: $tile-width-mobile;
+    flex: 0 0  $tile-width;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    @include desktop {
+      height: $tile-height;
+      width: $tile-width;
+    }
+  }
+
+  &__img {
+    height: $tile-height-mobile;
+    object-fit: cover;
+    width: $tile-width-mobile;
+
+    @include desktop {
+      height: $tile-height;
+      width: $tile-width;
+    }
+  }
+}
+
+@keyframes testimonials-x {
+  0% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(calc(-#{$tile-width + 30px} * 5))
+  }
+}

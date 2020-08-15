@@ -1,0 +1,12 @@
+mixin interfaceTabs(spec)
+  nav.tabs
+    ul.tabs__list
+      each val in spec
+        li.tabs__item
+          input(class='tabs__input' type='radio' name="slide" id=val.input.id checked=val.input.isChecked)
+          label(class='tabs__link' for=val.input.label.__for) #{val.input.label.text}
+          .slide
+            .slide__inner
+              .slide__item
+                each image in val.input.images
+                  img.slide__img(class=image.cssExtra src=image.srcImage alt=image.altText)

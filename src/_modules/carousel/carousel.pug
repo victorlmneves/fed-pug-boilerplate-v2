@@ -1,0 +1,17 @@
+mixin carousel(spec)
+  - spec = spec || {}
+  //- - spec.config.nrOfLoops = spec.config.nrOfLoops || 1
+  //- - spec.config.mainClass = spec.config.mainClass || 'carousel'
+  //- - spec.config.innerClass = spec.config.innerClass || 'carousel__inner'
+  //- - spec.config.listClass = spec.config.listClass || 'carousel__list'
+  //- - spec.config.itemClass = spec.config.itemClass || 'carousel__item'
+  //- - spec.config.imgClass = spec.config.imgClass || 'carousel__img'
+  //- - spec.config.modifierClass = spec.config.modifierClass || ''
+  //- | #{spec.carousel}
+  section(class=spec.config.mainClass)
+    div(class=spec.config.innerClass)
+      ul(class=spec.config.listClass)
+        - for (var i=0; i < 2; i++)
+          each val in spec.carousel
+            li(class=spec.config.itemClass)
+              img(class=spec.config.imgClass src=val.srcImage alt=val.altText)

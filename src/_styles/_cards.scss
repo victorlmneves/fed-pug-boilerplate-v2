@@ -1,0 +1,99 @@
+.cards {
+  @include mobile {
+    @include flex-vertical-align();
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    @include display-flex-between();
+    margin-bottom: 0;
+    margin-top: 60px;
+  }
+
+  &__container {
+    display: inline-block;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+
+    @include desktop {
+      text-align: center;
+      max-width: 33.3366%;
+    }
+
+    &:not(:last-child) {
+      @include desktop {
+        margin-right: 45px;
+      }
+    }
+  }
+
+  &__icon {
+
+    &-img {
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+    }
+
+    &-blue {
+      @include square(50px, 10px, 135deg, #32fbfc, #3214f2, 0);
+    }
+
+    &-darkblue {
+      @include square(50px, 10px, 135deg, #9c09db, #1c0fd7, 0);
+    }
+
+    &-orange {
+      @include square(50px, 10px, 135deg, #f2c314, #fc3832, 0);
+    }
+
+    &-blue,
+    &-darkblue,
+    &-orange {
+      box-shadow: 0 3px 6px rgba(0,0,0,.5);
+
+      @include desktop {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: $font-weight-medium;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    margin-top: .85rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 0;
+    margin-top: .85rem;
+
+    @include desktop {
+      padding: 0 20px;
+    }
+  }
+
+  &__link {
+    font-size: .9rem;
+    font-weight: $font-weight-medium;
+    position: relative;
+    top: -10px;
+
+    &:after {
+      content: ' \02023';
+      font-size: 3rem;
+      position: relative;
+      top: 10px;
+
+      @include desktop {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+mixin form(spec)
+  each val in spec.input
+    input(class=val.__class type=val.__type name=val.__name placeholder=val.__placeholder)
+    label(class=val.label.__class for=val.label.__for)
+      | #{val.label.text}
+  button(class=spec.button.__class type=spec.button.__type name=spec.button.__name)
+    | #{spec.button.text}
+    
+  if block
+    block
