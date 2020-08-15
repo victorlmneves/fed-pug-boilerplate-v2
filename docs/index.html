@@ -1,0 +1,285 @@
+
+<!--MODULE INCLUDES HERE--><!DOCTYPE html><html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FED Yeogurt Boilerplate with Pug</title>
+  <meta name="description" content="A new Yeogurt application">
+  <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="../styles/lib/normalize.css">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body><!--[if lt IE 11]>
+<p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
+<![endif]--><a name="top"></a>
+  <nav class="menu">
+    <div class="menu__inner">
+      <h1 class="menu__logo">
+        <show></show><span class="menu__logo--blue">Trackr</span>
+      </h1>
+      <ul class="menu__topics">
+        <li class="menu__item"><a class="menu__link" href="#">Features</a>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Community</a>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Get started</a>
+        </li>
+      </ul>
+      <ul class="menu__login">
+        <li class="menu__item"><a class="menu__link" href="#">Log in</a>
+        </li>
+        <li class="menu__item">
+          <button class="button menu__button">Get started</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="square-orange"></div>
+    <div class="square-dark-blue"></div>
+    <div class="square-blue"></div>
+    <section class="section section--hero">
+      <div class="section__inner section__inner--row">
+        <div class="section__content section__content--left">
+          <h1 class="section__title section__title--hero">Track your shows automatically</h1>
+          <p class="section__text">With ShowTrackr you can track your favorite TV shows automatically, so you never loose track of your TV shows ever again</p>
+          <form class="newsletter">
+            <div class="newsletter__inner">
+              <input class="newsletter__input" type="email" name="email" placeholder="your@email.com">
+              <label class="newsletter__label" for="email">Email</label>
+              <button class="button newsletter__button" type="button" name="button">Start tracking</button>
+            </div>
+          </form>
+          <div class="apps">
+            <h3 class="apps__title">Compatible with</h3>
+            <div class="apps__logos">
+              <image class="apps__item" src="images/brand-netflix.png" alt="Netflix"></image>
+              <image class="apps__item" src="images/brand-apple.png" alt="Apple"></image>
+              <image class="apps__item" src="images/brand-android.png" alt="Android"></image>
+              <image class="apps__item" src="images/brand-windows.png" alt="Windows"></image>
+              <image class="apps__item" src="images/brand-synology.png" alt="Synology"></image>
+            </div>
+          </div>
+        </div>
+        <image class="section__img" src="images/mockup-app-iphone-x.png" alt="App mockup"></image>
+      </div>
+    </section>
+    <section class="section section--features">
+      <div class="section__inner section__inner--features">
+        <div class="section__content">
+          <h2 class="section__topic">Features</h2>
+          <h1 class="section__title section__title--features">Built and customized for your habits</h1>
+          <p class="section__text">ShowTrackr’s built-in machine learning and context-aware features guarantee that all the notifications and recommendations are always delivered to you in the perfect moment.
+          </p>
+        </div>
+        <div class="cards">
+          <div class="cards__container">
+            <div class="cards__icon-darkblue">
+              <image class="cards__icon-img" src="images/play.svg" alt="Automated tracking"></image>
+            </div>
+            <h3 class="cards__title">Automated tracking</h3>
+            <p class="cards__text">Track your favorite shows automatically without switching between apps.</p><a class="cards__link" href="#">Learn more</a>
+          </div>
+          <div class="cards__container">
+            <div class="cards__icon-orange">
+              <image class="cards__icon-img" src="images/ml.svg" alt="Machine Learning"></image>
+            </div>
+            <h3 class="cards__title">Machine Learning</h3>
+            <p class="cards__text">Get recommendations like never before, which are truly customized for your taste.</p><a class="cards__link" href="#">Learn more</a>
+          </div>
+          <div class="cards__container">
+            <div class="cards__icon-blue">
+              <image class="cards__icon-img" src="images/Icon.svg" alt="Automated tracking"></image>
+            </div>
+            <h3 class="cards__title">Automated tracking</h3>
+            <p class="cards__text">Receive smart notifications exactly at the right moments when you need them.</p><a class="cards__link" href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="carousel">
+      <div class="carousel__inner">
+        <ul class="carousel__list">
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-black-mirror.png" alt="Black Mirror"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-stranger-things.png" alt="Stranger Things"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-westworld.png" alt="Westworld"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-house-of-cards.png" alt="House of Cards"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-game-of-thrones.png" alt="Game of Thrones"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-flash.png" alt="Flash"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-how-to-get-away-with-murder.png" alt="How to get away with murder"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-black-mirror.png" alt="Black Mirror"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-stranger-things.png" alt="Stranger Things"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-westworld.png" alt="Westworld"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-house-of-cards.png" alt="House of Cards"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-game-of-thrones.png" alt="Game of Thrones"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-flash.png" alt="Flash"></li>
+          <li class="carousel__item"><img class="carousel__img" src="images/cover-how-to-get-away-with-murder.png" alt="How to get away with murder"></li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section--apps">
+      <div class="section__inner section__inner--row">
+        <div class="section__content section__content--left">
+          <h1 class="section__title">Easy-to-use interfaces on every platform</h1>
+          <p class="section__text">Since most of our features work in a completely automated way, you will mainly use our apps to discover new TV shows recommended for you and discuss the most interesting episodes with like-minded people.
+          </p>
+          <nav class="tabs">
+            <ul class="tabs__list">
+              <li class="tabs__item">
+                <input class="tabs__input" type="radio" name="slide" id="slide-01" checked>
+                <label class="tabs__link" for="slide-01">Customized Dashboard</label>
+                <div class="slide">
+                  <div class="slide__inner">
+                    <div class="slide__item"><img class="slide__img" src="images/mockup-app-iphone-x.png" alt="App mockup iPhone"><img class="slide__img slide__img--right" src="images/mockup-app-desktop.png" alt="App mockup Desktop">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tabs__item">
+                <input class="tabs__input" type="radio" name="slide" id="slide-02">
+                <label class="tabs__link" for="slide-02">Automatic Day &amp; Night Modes</label>
+                <div class="slide">
+                  <div class="slide__inner">
+                    <div class="slide__item"><img class="slide__img" src="images/mockup-app-iphone-x.png" alt="App mockup iPhone"><img class="slide__img slide__img--right" src="images/mockup-app-desktop.png" alt="App mockup Desktop">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tabs__item">
+                <input class="tabs__input" type="radio" name="slide" id="slide-03">
+                <label class="tabs__link" for="slide-03">Integrated Chat Platform</label>
+                <div class="slide">
+                  <div class="slide__inner">
+                    <div class="slide__item"><img class="slide__img" src="images/mockup-app-iphone-x.png" alt="App mockup iPhone"><img class="slide__img slide__img--right" src="images/mockup-app-desktop.png" alt="App mockup Desktop">
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section class="section section--twitter">
+      <div class="section__inner section__inner--row">
+        <div class="section__content section__content--left">
+          <h1 class="section__title">We believe in the power of community</h1>
+          <p class="section__text">Our goal is to create a product and service that you’re satisfied with and use it every day. This is why we’re constantly working on our services to make it better every day and really listen to what our users has to say.
+          </p>
+          <button class="button section__button">Read more testimonials</button>
+        </div>
+        <div class="section__content">
+          <div class="twitter">
+            <ul class="twitter__feed">
+              <li class="twitter__card">
+                <div class="twitter__user">
+                  <image class="twitter__img" src="images/person-patrick-martin.png" alt="Photo of Patrick Martin"></image>
+                  <p class="twitter__name"></p><img class="twitter__icon" alt="Twitter" src="images/social-twitter.svg">
+                </div>
+                <p class="twitter__text">ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows. I can only recommend it!</p>
+                <p class="twitter__date">Jan 18, 2018</p>
+              </li>
+              <li class="twitter__card">
+                <div class="twitter__user">
+                  <image class="twitter__img" src="images/person-bruce-murphy.png" alt="Photo of Bruce Murphy"></image>
+                  <p class="twitter__name"></p><img class="twitter__icon" alt="Twitter" src="images/social-twitter.svg">
+                </div>
+                <p class="twitter__text">ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.</p>
+                <p class="twitter__date">Jan 18, 2018</p>
+              </li>
+              <li class="twitter__card">
+                <div class="twitter__user">
+                  <image class="twitter__img" src="images/person-crystal-perkins.png" alt="Photo of Crystal Perkins"></image>
+                  <p class="twitter__name"></p><img class="twitter__icon" alt="Twitter" src="images/social-twitter.svg">
+                </div>
+                <p class="twitter__text">ShowTrackr. I can only recommend it!</p>
+                <p class="twitter__date">Jan 18, 2018</p>
+              </li>
+              <li class="twitter__card">
+                <div class="twitter__user">
+                  <image class="twitter__img" src="images/person-gregory-wallace.png" alt="Photo of Gregory Wallace"></image>
+                  <p class="twitter__name"></p><img class="twitter__icon" alt="Twitter" src="images/social-twitter.svg">
+                </div>
+                <p class="twitter__text">ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows. I can only recommend it!</p>
+                <p class="twitter__date">Jan 18, 2018</p>
+              </li>
+              <li class="twitter__card">
+                <div class="twitter__user">
+                  <image class="twitter__img" src="images/person-megan-walters.png" alt="Photo of Megan Walters"></image>
+                  <p class="twitter__name"></p><img class="twitter__icon" alt="Twitter" src="images/social-twitter.svg">
+                </div>
+                <p class="twitter__text">ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.</p>
+                <p class="twitter__date">Jan 18, 2018</p>
+              </li>
+              <li class="twitter__card">
+                <div class="twitter__user">
+                  <image class="twitter__img" src="images/person-thomas-cruz.png" alt="Photo of Thomas Cruz"></image>
+                  <p class="twitter__name"></p><img class="twitter__icon" alt="Twitter" src="images/social-twitter.svg">
+                </div>
+                <p class="twitter__text">ShowTrackr. I can only recommend it!</p>
+                <p class="twitter__date">Jan 18, 2018</p>
+              </li>
+              <li class="twitter__card">
+                <div class="twitter__user">
+                  <image class="twitter__img" src="images/person-andrew-cook.png" alt="Photo of Andrew Cook"></image>
+                  <p class="twitter__name"></p><img class="twitter__icon" alt="Twitter" src="images/social-twitter.svg">
+                </div>
+                <p class="twitter__text">ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows. I can only recommend it!</p>
+                <p class="twitter__date">Jan 18, 2018</p>
+              </li>
+              <li class="twitter__card">
+                <div class="twitter__user">
+                  <image class="twitter__img" src="images/person-joseph-mathews.png" alt="Photo of Joseph Mathews"></image>
+                  <p class="twitter__name"></p><img class="twitter__icon" alt="Twitter" src="images/social-twitter.svg">
+                </div>
+                <p class="twitter__text">ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.</p>
+                <p class="twitter__date">Jan 18, 2018</p>
+              </li>
+              <li class="twitter__card">
+                <div class="twitter__user">
+                  <image class="twitter__img" src="images/person-patrick-martin.png" alt="Photo of Patrick Martin"></image>
+                  <p class="twitter__name"></p><img class="twitter__icon" alt="Twitter" src="images/social-twitter.svg">
+                </div>
+                <p class="twitter__text">ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.</p>
+                <p class="twitter__date">Jan 18, 2018</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__inner section__inner--get-started">
+        <div class="section__content">
+          <h1 class="section__title section__title--get-started">Start tracking your TV shows for free</h1>
+          <p class="section__text text-center">In order to start tracking your TV shows, all you have to do is enter your email address. Everything else will be taken care of by us. All you have to do is sit back, relax and enjoy your TV shows.
+          </p>
+          <form class="newsletter">
+            <div class="newsletter__inner newsletter__inner--center">
+              <input class="newsletter__input" type="email" name="email" placeholder="your@email.com">
+              <label class="newsletter__label" for="email">Email</label>
+              <button class="button newsletter__button" type="button" name="button">Start tracking</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer css="footer">
+      <div class="footer__inner">
+        <ul class="social-networks">
+          <li class="social-networks__item"><a class="social-networks__link" href="#">
+              <image src="images/social-twitter.svg" alt="Twitter"></image></a>
+          </li>
+          <li class="social-networks__item"><a class="social-networks__link" href="#">
+              <image src="images/social-facebook.svg" alt="Facebook"></image></a>
+          </li>
+          <li class="social-networks__item"><a class="social-networks__link" href="#">
+              <image src="images/social-youtube.svg" alt="YouTube"></image></a>
+          </li>
+        </ul>
+        <p class="footer__copyrights">Copyright 2020 All rights reserved — Designed by Daniel Korpai | Code by Victor Neves
+        </p>
+      </div>
+    </footer><a class="back-to-top" href="#top"></a>
+  </div>
+</body></html>
