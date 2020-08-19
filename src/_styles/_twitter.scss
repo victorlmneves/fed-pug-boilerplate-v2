@@ -72,6 +72,9 @@
 
   &__text {
     @include mobile {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       width: 220px;
     }
 
