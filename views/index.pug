@@ -1,0 +1,328 @@
+extends layout
+
+block content
+  a(name='top')
+  +menu()
+
+  .container
+    +square('square-orange')
+    +square('square-dark-blue')
+    +square('square-blue')
+
+    section.section.section--hero
+      .section__inner.section__inner--row
+        .section__content.section__content--left
+          +sectionTitle('Track your shows automatically', 'section__title--hero')
+          +sectionText('With ShowTrackr you can track your favorite TV shows automatically, so you never loose track of your TV shows ever again')
+          form.newsletter
+            .newsletter__inner
+              +form({
+                input: [
+                  {
+                    __class: 'newsletter__input',
+                    __type: 'email',
+                    __name: 'email',
+                    __placeholder: 'your@email.com',
+                    label: {
+                      __class: 'newsletter__label',
+                      __for: 'email',
+                      text: 'Email' 
+                    }
+                  }
+                ],
+                button: {
+                  __class: 'button newsletter__button',
+                  __type: 'button',
+                  __name: 'button',
+                  text: 'Start tracking' 
+                }
+              })
+          .apps
+            h3.apps__title Compatible with
+            .apps__logos
+              +appsLogos([
+                  {
+                    image: 'images/brand-netflix.png',
+                    altText: 'Netflix'
+                  },
+                  {
+                    image: 'images/brand-apple.png',
+                    altText: 'Apple'
+                  },
+                  {
+                    image: 'images/brand-android.png',
+                    altText: 'Android'
+                  },
+                  {
+                    image: 'images/brand-windows.png',
+                    altText: 'Windows'
+                  },
+                  {
+                    image: 'images/brand-synology.png',
+                    altText: 'Synology'
+                  }
+                ])
+        +heroImage('App mockup', 'images/mockup-app-iphone-x.png', 'section__img')
+
+    section.section.section--features
+      .section__inner.section__inner--features
+        .section__content
+          h2.section__topic Features
+          +sectionTitle('Built and customized for your habits', 'section__title--features')
+          +text({__class: 'section__text', text: 'ShowTrackr’s built-in machine learning and context-aware features guarantee that all the notifications and recommendations are always delivered to you in the perfect moment.'})
+        
+        +cards([
+          {
+            name: 'darkblue',
+            image: 'images/play.svg',
+            title: 'Automated tracking',
+            text: 'Track your favorite shows automatically without switching between apps.'
+          },
+          {
+            name: 'orange',
+            image: 'images/ml.svg',
+            title: 'Machine Learning',
+            text: 'Get recommendations like never before, which are truly customized for your taste.'
+          },
+          {
+            name: 'blue',
+            image: 'images/Icon.svg',
+            title: 'Automated tracking',
+            text: 'Receive smart notifications exactly at the right moments when you need them.'
+          }
+        ])
+
+    +carousel({
+        config: {
+          mainClass: 'carousel',
+          innerClass: 'carousel__inner',
+          listClass: 'carousel__list',
+          itemClass: 'carousel__item',
+          imgClass: 'carousel__img',
+          modifierClass: '',
+          nrOfLoops: 2
+        },
+        carousel: [
+          {
+            altText: 'Black Mirror',
+            srcImage: 'images/cover-black-mirror.png'
+          },
+          {
+            altText: 'Stranger Things',
+            srcImage: 'images/cover-stranger-things.png'
+          },
+          {
+            altText: 'Westworld',
+            srcImage: 'images/cover-westworld.png'
+          },
+          {
+            altText: 'House of Cards',
+            srcImage: 'images/cover-house-of-cards.png'
+          },
+          {
+            altText: 'Game of Thrones',
+            srcImage: 'images/cover-game-of-thrones.png'
+          },
+          {
+            altText: 'Flash',
+            srcImage: 'images/cover-flash.png'
+          },
+          {
+            altText: 'How to get away with murder',
+            srcImage: 'images/cover-how-to-get-away-with-murder.png'
+          }
+        ]
+      })
+
+    section.section.section--apps
+      .section__inner.section__inner--row
+        .section__content.section__content--left
+          +sectionTitle('Easy-to-use interfaces on every platform')
+          +text({__class: 'section__text', text: 'Since most of our features work in a completely automated way, you will mainly use our apps to discover new TV shows recommended for you and discuss the most interesting episodes with like-minded people.'})
+          +interfaceTabs([
+            {
+              input: {
+                id: 'slide-01',
+                isChecked: true,
+                label: {
+                  __for: 'slide-01',
+                  text: 'Customized Dashboard'
+                },
+                images: [
+                  {
+                    srcImage: 'images/mockup-app-iphone-x.png',
+                    altText: 'App mockup iPhone',
+                    cssExtra: ''
+                  },
+                  {
+                    srcImage: 'images/mockup-app-desktop.png',
+                    altText: 'App mockup Desktop',
+                    cssExtra: 'slide__img--right'
+                  }
+                ]
+              }
+            },
+            {
+              input: {
+                id: 'slide-02',
+                label: {
+                  __for: 'slide-02',
+                  text: 'Automatic Day & Night Modes'
+                },
+                images: [
+                  {
+                    srcImage: 'images/mockup-app-iphone-x.png',
+                    altText: 'App mockup iPhone',
+                    cssExtra: ''
+                  },
+                  {
+                    srcImage: 'images/mockup-app-desktop.png',
+                    altText: 'App mockup Desktop',
+                    cssExtra: 'slide__img--right'
+                  }
+                ]
+              }
+            },
+            {
+              input: {
+                id: 'slide-03',
+                label: {
+                  __for: 'slide-03',
+                  text: 'Integrated Chat Platform'
+                },
+                images: [
+                  {
+                    srcImage: 'images/mockup-app-iphone-x.png',
+                    altText: 'App mockup iPhone',
+                    cssExtra: ''
+                  },
+                  {
+                    srcImage: 'images/mockup-app-desktop.png',
+                    altText: 'App mockup Desktop',
+                    cssExtra: 'slide__img--right'
+                  }
+                ]
+              }
+            }
+          ])
+
+    section.section.section--twitter
+      .section__inner.section__inner--row
+        .section__content.section__content--left
+          +sectionTitle('We believe in the power of community')
+          +text({__class: 'section__text', text: 'Our goal is to create a product and service that you’re satisfied with and use it every day. This is why we’re constantly working on our services to make it better every day and really listen to what our users has to say.'})
+          +primaryButton('Read more testimonials', 'section__button')
+
+        .section__content
+          +twitterCards([
+            {
+              userPhoto: 'person-patrick-martin.png',
+              userName: 'Patrick Martin',
+              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows. I can only recommend it!',
+              tweetDate: 'Jan 18, 2018'
+            },
+            {
+              userPhoto: 'person-bruce-murphy.png',
+              userName: 'Bruce Murphy',
+              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.',
+              tweetDate: 'Jan 18, 2018'
+            },
+            {
+              userPhoto: 'person-crystal-perkins.png',
+              userName: 'Crystal Perkins',
+              tweetText: 'ShowTrackr. I can only recommend it!',
+              tweetDate: 'Jan 18, 2018'
+            },
+            {
+              userPhoto: 'person-gregory-wallace.png',
+              userName: 'Gregory Wallace',
+              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows. I can only recommend it!',
+              tweetDate: 'Jan 18, 2018'
+            },
+            {
+              userPhoto: 'person-megan-walters.png',
+              userName: 'Megan Walters',
+              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.',
+              tweetDate: 'Jan 18, 2018'
+            },
+            {
+              userPhoto: 'person-thomas-cruz.png',
+              userName: 'Thomas Cruz',
+              tweetText: 'ShowTrackr. I can only recommend it!',
+              tweetDate: 'Jan 18, 2018'
+            },
+            {
+              userPhoto: 'person-andrew-cook.png',
+              userName: 'Andrew Cook',
+              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows. I can only recommend it!',
+              tweetDate: 'Jan 18, 2018'
+            },
+            {
+              userPhoto: 'person-joseph-mathews.png',
+              userName: 'Joseph Mathews',
+              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.',
+              tweetDate: 'Jan 18, 2018'
+            },
+            {
+              userPhoto: 'person-patrick-martin.png',
+              userName: 'Patrick Martin',
+              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.',
+              tweetDate: 'Jan 18, 2018'
+            }
+          ])
+
+    section.section
+      .section__inner.section__inner--get-started
+        .section__content
+          +sectionTitle('Start tracking your TV shows for free', 'section__title--get-started')
+          +text({__class: 'section__text', cssExtra: 'text-center', text: 'In order to start tracking your TV shows, all you have to do is enter your email address. Everything else will be taken care of by us. All you have to do is sit back, relax and enjoy your TV shows.'})
+          form.newsletter
+            .newsletter__inner.newsletter__inner--center
+              +form({
+                input: [
+                  {
+                    __class: 'newsletter__input',
+                    __type: 'email',
+                    __name: 'email',
+                    __placeholder: 'your@email.com',
+                    label: {
+                      __class: 'newsletter__label',
+                      __for: 'email',
+                      text: 'Email' 
+                    }
+                  }
+                ],
+                button: {
+                  __class: 'button newsletter__button',
+                  __type: 'button',
+                  __name: 'button',
+                  text: 'Start tracking' 
+                }
+              })
+
+    footer(css='footer')
+      div(class='footer__inner')
+        +socialNetworks([
+          {
+            name: 'Twitter',
+            css: 'social-networks__link',
+            link: '#',
+            image: 'images/social-twitter.svg'
+          },
+          {
+            name: 'Facebook',
+            css: 'social-networks__link',
+            link: '#',
+            image: 'images/social-facebook.svg'
+          },
+          {
+            name: 'YouTube',
+            css: 'social-networks__link',
+            link: '#',
+            image: 'images/social-youtube.svg'
+          }
+        ])
+
+        +text({__class: 'footer__copyrights', text: 'Copyright 2020 All rights reserved — Designed by Daniel Korpai | Code by Victor Neves'})
+      
+    +back-to-top()
