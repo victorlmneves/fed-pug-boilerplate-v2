@@ -12,8 +12,8 @@ block content
     section.section.section--hero
       .section__inner.section__inner--row
         .section__content.section__content--left
-          +sectionTitle('Track your shows automatically', 'section__title--hero')
-          +sectionText('With ShowTrackr you can track your favorite TV shows automatically, so you never loose track of your TV shows ever again')
+          +sectionTitle(heroSection.title, heroSection.modifier_css)
+          +sectionText(heroSection.text)
           form.newsletter
             .newsletter__inner
               +form({
@@ -62,7 +62,7 @@ block content
                     altText: 'Synology'
                   }
                 ])
-        +heroImage('App mockup', 'images/mockup-app-iphone-x.png', 'section__img')
+        +heroImage(heroSection.alt_text, `images/${heroSection.image}`, heroSection.image_css)
 
     section.section.section--features
       .section__inner.section__inner--features
@@ -137,8 +137,8 @@ block content
     section.section.section--apps
       .section__inner.section__inner--row
         .section__content.section__content--left
-          +sectionTitle('Easy-to-use interfaces on every platform')
-          +text({__class: 'section__text', text: 'Since most of our features work in a completely automated way, you will mainly use our apps to discover new TV shows recommended for you and discuss the most interesting episodes with like-minded people.'})
+          +sectionTitle(appsSection.title)
+          +text(appsSection.text)
           +interfaceTabs([
             {
               input: {
