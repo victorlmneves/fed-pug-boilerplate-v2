@@ -68,70 +68,14 @@ block content
       .section__inner.section__inner--features
         .section__content
           h2.section__topic Features
-          +sectionTitle('Built and customized for your habits', 'section__title--features')
-          +text({__class: 'section__text', text: 'ShowTrackr’s built-in machine learning and context-aware features guarantee that all the notifications and recommendations are always delivered to you in the perfect moment.'})
+          +sectionTitle(featuresSection.title, featuresSection.title_css)
+          +sectionText(featuresSection.text, featuresSection.text_css)
         
-        +cards([
-          {
-            name: 'darkblue',
-            image: 'images/play.svg',
-            title: 'Automated tracking',
-            text: 'Track your favorite shows automatically without switching between apps.'
-          },
-          {
-            name: 'orange',
-            image: 'images/ml.svg',
-            title: 'Machine Learning',
-            text: 'Get recommendations like never before, which are truly customized for your taste.'
-          },
-          {
-            name: 'blue',
-            image: 'images/Icon.svg',
-            title: 'Automated tracking',
-            text: 'Receive smart notifications exactly at the right moments when you need them.'
-          }
-        ])
+        +cards(cards)
 
     +carousel({
-        config: {
-          mainClass: 'carousel',
-          innerClass: 'carousel__inner',
-          listClass: 'carousel__list',
-          itemClass: 'carousel__item',
-          imgClass: 'carousel__img',
-          modifierClass: '',
-          nrOfLoops: 2
-        },
-        carousel: [
-          {
-            altText: 'Black Mirror',
-            srcImage: 'images/cover-black-mirror.png'
-          },
-          {
-            altText: 'Stranger Things',
-            srcImage: 'images/cover-stranger-things.png'
-          },
-          {
-            altText: 'Westworld',
-            srcImage: 'images/cover-westworld.png'
-          },
-          {
-            altText: 'House of Cards',
-            srcImage: 'images/cover-house-of-cards.png'
-          },
-          {
-            altText: 'Game of Thrones',
-            srcImage: 'images/cover-game-of-thrones.png'
-          },
-          {
-            altText: 'Flash',
-            srcImage: 'images/cover-flash.png'
-          },
-          {
-            altText: 'How to get away with murder',
-            srcImage: 'images/cover-how-to-get-away-with-murder.png'
-          }
-        ]
+        carouselConfig,
+        carouselImages
       })
 
     section.section.section--apps
@@ -139,72 +83,10 @@ block content
         .section__content.section__content--left
           +sectionTitle(appsSection.title)
           +text(appsSection.text)
-          +interfaceTabs([
-            {
-              input: {
-                id: 'slide-01',
-                isChecked: true,
-                label: {
-                  __for: 'slide-01',
-                  text: 'Customized Dashboard'
-                },
-                images: [
-                  {
-                    srcImage: 'images/mockup-app-iphone-x.png',
-                    altText: 'App mockup iPhone',
-                    cssExtra: ''
-                  },
-                  {
-                    srcImage: 'images/mockup-app-desktop.png',
-                    altText: 'App mockup Desktop',
-                    cssExtra: 'slide__img--right'
-                  }
-                ]
-              }
-            },
-            {
-              input: {
-                id: 'slide-02',
-                label: {
-                  __for: 'slide-02',
-                  text: 'Automatic Day & Night Modes'
-                },
-                images: [
-                  {
-                    srcImage: 'images/mockup-app-iphone-x.png',
-                    altText: 'App mockup iPhone',
-                    cssExtra: ''
-                  },
-                  {
-                    srcImage: 'images/mockup-app-desktop.png',
-                    altText: 'App mockup Desktop',
-                    cssExtra: 'slide__img--right'
-                  }
-                ]
-              }
-            },
-            {
-              input: {
-                id: 'slide-03',
-                label: {
-                  __for: 'slide-03',
-                  text: 'Integrated Chat Platform'
-                },
-                images: [
-                  {
-                    srcImage: 'images/mockup-app-iphone-x.png',
-                    altText: 'App mockup iPhone',
-                    cssExtra: ''
-                  },
-                  {
-                    srcImage: 'images/mockup-app-desktop.png',
-                    altText: 'App mockup Desktop',
-                    cssExtra: 'slide__img--right'
-                  }
-                ]
-              }
-            }
-          ])
+          +interfaceTabs({
+            interfaceTabs,
+            interfaceTabsImages
+          })
 
     section.section.section--twitter
       .section__inner.section__inner--row

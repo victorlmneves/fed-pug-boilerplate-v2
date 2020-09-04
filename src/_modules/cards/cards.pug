@@ -3,7 +3,7 @@ mixin cards(spec)
     each val in spec
       .cards__container
         div(class='cards__icon-' + val.name)
-          image(class='cards__icon-img' src=val.image alt=val.title )
+          image(class='cards__icon-img' src=`images/${val.image}` alt=val.title )
         h3.cards__title #{val.title}
         p.cards__text #{val.text}
         a(class='cards__link' href='#') Learn more
