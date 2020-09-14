@@ -14,8 +14,8 @@ mixin twitterCards(spec)
       each val in spec
         li.twitter__card
           .twitter__user
-            image(class='twitter__img' src=`images/${val.userPhoto}` alt=`Photo of ${val.userName}`)
-            p.twitter__name #{userName}
+            image(class='twitter__img' src=`images/${val.photo}` alt=`Photo of ${val.username}`)
+            p.twitter__name #{username}
             img(class='twitter__icon' alt='Twitter' src='images/social-twitter.svg')
-          p.twitter__text #{val.tweetText}
-          p.twitter__date #{val.tweetDate}
+          p.twitter__text #{val.text}
+          p.twitter__date #{val.date}

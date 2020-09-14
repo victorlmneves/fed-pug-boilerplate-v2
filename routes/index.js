@@ -13,6 +13,10 @@ let cards = null
 let carouselConfig = null
 let carouselImages = null
 let featuresSection = null
+let twitterSection = null
+let tweets = null
+let socialNetworks = null
+let copyright = null
 
 const heroSectionContent = fetch(
   'https://express-api.victorneves.dev/hero_section/',
@@ -165,6 +169,74 @@ interfaceTabsImagesContent.then(function (res) {
   interfaceTabsImages = res
 })
 
+const twitterContent = fetch(
+  "https://express-api.victorneves.dev/twitter_section/",
+  requestOptions
+)
+  .then((resp) => resp.json())
+  .then((res) => {
+    const obj = res.records
+
+    return obj
+  })
+  .catch((error) => console.log(JSON.stringify(error)))
+
+twitterContent.then(function (res) {
+  twitterSection = res[0]
+})
+
+const tweetsContent = fetch(
+  "https://express-api.victorneves.dev/tweets/",
+  requestOptions
+)
+  .then((resp) => resp.json())
+  .then((res) => {
+    const obj = res.records
+
+    return obj
+  })
+  .catch((error) => console.log(JSON.stringify(error)))
+
+tweetsContent.then(function (res) {
+  console.log("tweets ", res)
+  tweets = res
+})
+
+const socialNetworksContent = fetch(
+  "https://express-api.victorneves.dev/social_networks/",
+  requestOptions
+)
+  .then((resp) => resp.json())
+  .then((res) => {
+    const obj = res.records
+
+    return obj
+  })
+  .catch((error) => console.log(JSON.stringify(error)))
+
+socialNetworksContent.then(function (res) {
+  socialNetworks = res
+})
+
+const copyrightContent = fetch(
+  "https://express-api.victorneves.dev/copyrights/",
+  requestOptions
+)
+  .then((resp) => resp.json())
+  .then((res) => {
+    const obj = {
+      __class: res.records[0].css,
+      text: res.records[0].text,
+    }
+
+    return obj
+  })
+  .catch((error) => console.log(JSON.stringify(error)))
+
+copyrightContent.then(function (res) {
+  copyright = res
+})
+
 router.get('/', function (req, res, next) {
   res.render("index", {
     heroSection,
@@ -174,8 +246,12 @@ router.get('/', function (req, res, next) {
     carouselImages,
     appsSection,
     interfaceTabs,
-    interfaceTabsImages
-  })
+    interfaceTabsImages,
+    tweets,
+    twitterSection,
+    socialNetworks,
+    copyright,
+  });
 })
 
 module.exports = router

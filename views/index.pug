@@ -83,75 +83,17 @@ block content
         .section__content.section__content--left
           +sectionTitle(appsSection.title)
           +text(appsSection.text)
-          +interfaceTabs({
-            interfaceTabs,
-            interfaceTabsImages
-          })
+          +interfaceTabs({interfaceTabs,interfaceTabsImages})
 
     section.section.section--twitter
       .section__inner.section__inner--row
         .section__content.section__content--left
-          +sectionTitle('We believe in the power of community')
-          +text({__class: 'section__text', text: 'Our goal is to create a product and service that you’re satisfied with and use it every day. This is why we’re constantly working on our services to make it better every day and really listen to what our users has to say.'})
-          +primaryButton('Read more testimonials', 'section__button')
+          +sectionTitle(twitterSection.title)
+          +text({__class: twitterSection.text_css, text: twitterSection.text})
+          +primaryButton(twitterSection.link_text, twitterSection.link_css)
 
         .section__content
-          +twitterCards([
-            {
-              userPhoto: 'person-patrick-martin.png',
-              userName: 'Patrick Martin',
-              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows. I can only recommend it!',
-              tweetDate: 'Jan 18, 2018'
-            },
-            {
-              userPhoto: 'person-bruce-murphy.png',
-              userName: 'Bruce Murphy',
-              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.',
-              tweetDate: 'Jan 18, 2018'
-            },
-            {
-              userPhoto: 'person-crystal-perkins.png',
-              userName: 'Crystal Perkins',
-              tweetText: 'ShowTrackr. I can only recommend it!',
-              tweetDate: 'Jan 18, 2018'
-            },
-            {
-              userPhoto: 'person-gregory-wallace.png',
-              userName: 'Gregory Wallace',
-              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows. I can only recommend it!',
-              tweetDate: 'Jan 18, 2018'
-            },
-            {
-              userPhoto: 'person-megan-walters.png',
-              userName: 'Megan Walters',
-              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.',
-              tweetDate: 'Jan 18, 2018'
-            },
-            {
-              userPhoto: 'person-thomas-cruz.png',
-              userName: 'Thomas Cruz',
-              tweetText: 'ShowTrackr. I can only recommend it!',
-              tweetDate: 'Jan 18, 2018'
-            },
-            {
-              userPhoto: 'person-andrew-cook.png',
-              userName: 'Andrew Cook',
-              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows. I can only recommend it!',
-              tweetDate: 'Jan 18, 2018'
-            },
-            {
-              userPhoto: 'person-joseph-mathews.png',
-              userName: 'Joseph Mathews',
-              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.',
-              tweetDate: 'Jan 18, 2018'
-            },
-            {
-              userPhoto: 'person-patrick-martin.png',
-              userName: 'Patrick Martin',
-              tweetText: 'ShowTrackr is a real gem! I started using it a couple months ago and it completely changed the way how I watch TV shows.',
-              tweetDate: 'Jan 18, 2018'
-            }
-          ])
+          +twitterCards(tweets)
 
     section.section
       .section__inner.section__inner--get-started
@@ -184,27 +126,8 @@ block content
 
     footer(css='footer')
       div(class='footer__inner')
-        +socialNetworks([
-          {
-            name: 'Twitter',
-            css: 'social-networks__link',
-            link: '#',
-            image: 'images/social-twitter.svg'
-          },
-          {
-            name: 'Facebook',
-            css: 'social-networks__link',
-            link: '#',
-            image: 'images/social-facebook.svg'
-          },
-          {
-            name: 'YouTube',
-            css: 'social-networks__link',
-            link: '#',
-            image: 'images/social-youtube.svg'
-          }
-        ])
+        +socialNetworks(socialNetworks)
 
-        +text({__class: 'footer__copyrights', text: 'Copyright 2020 All rights reserved — Designed by Daniel Korpai | Code by Victor Neves'})
+        +text(copyright)
       
     +back-to-top()

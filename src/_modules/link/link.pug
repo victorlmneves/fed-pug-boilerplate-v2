@@ -15,4 +15,4 @@ mixin menuLink(text, css, link)
 
 mixin linkWithImage(name, css, link, image)
   a(class=css href=link)
-    image(src=image alt=name)
+    image(src=`images/${image}` alt=name)
