@@ -17,7 +17,7 @@ fetch("https://dummyapi.io/data/api/user?limit=10", requestOptions)
   .then((data) => {
     const content = data.data;
 
-    console.log("users: ", content);
+    // console.log("users: ", content);
 
     /* GET home page. */
     router.get("/", function (req, res, next) {

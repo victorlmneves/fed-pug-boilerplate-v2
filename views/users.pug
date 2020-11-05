@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  a(name='top')
+  +menu()
+
+  .container
+    +square('square-orange')
+    +square('square-dark-blue')
+    +square('square-blue')
+
+    section.section.section
+      .section__inner.section__inner-
+        .section__content
+          h2.section__topic Comunity
+        .users
+          +userCards(spec)
+      
+    +back-to-top()

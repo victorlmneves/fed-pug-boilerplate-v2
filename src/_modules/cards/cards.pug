@@ -8,6 +8,7 @@ mixin cards(spec)
         p.cards__text #{val.text}
         a(class='cards__link' href='#') Learn more
 
+
 mixin twitterCards(spec)
   .twitter
     ul.twitter__feed
@@ -19,3 +20,18 @@ mixin twitterCards(spec)
             img(class='twitter__icon' alt='Twitter' src='images/social-twitter.svg')
           p.twitter__text #{val.text}
           p.twitter__date #{val.date}
+
+
+mixin userCards(spec)
+  each val in spec
+    .users__content
+      .users__item
+        img(class='users__img' src=val.picture alt=val.firstName)
+      div(class='users__item users__item--id')
+        | #{val.id}
+      div(class='users__item users__item--user' data-name=`${val.firstName} ${val.lastName}`)
+        | #{val.title}. #{val.firstName} #{val.lastName}
+      .users__item
+        a.users__link(href=`mailto: ${val.email}`)
+          | #{val.email}
+

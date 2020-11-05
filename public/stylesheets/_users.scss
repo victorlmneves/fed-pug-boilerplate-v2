@@ -1,0 +1,81 @@
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px auto 0;
+  max-width: 1200px;
+  opacity: 1;
+  transition: 2s opacity;
+
+  &__content {
+    background: $white;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    position: relative;
+    margin: 0 20px 40px;
+    width: 250px;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    font-size: .9rem;
+    margin-bottom: 10px;
+
+    &--id {
+      font-size: .8rem;
+      margin: 15px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &--user {
+      font-size: 1.2rem;
+      font-weight: $font-weight-medium;
+      margin-bottom: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__link {
+    color: $blue;
+    text-decoration: none;
+    text-indent: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    align-items: center;
+    background: transparent;
+    border: 2px solid $gray;
+    bottom: 10px;
+    color: $blue;
+    cursor: pointer;
+    display: flex;
+    font-size: .8rem;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+
+    & .icon-phone {
+      padding-right: 10px;
+    }
+
+    &:hover {
+      background: $gray;
+      color: $white;
+    }
+  }
+}

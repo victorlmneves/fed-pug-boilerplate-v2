@@ -28,7 +28,7 @@ html {
 
   @include mobile {
     overflow: hidden;
-    max-width: $max-width-mobile;
+    // max-width: $max-width-mobile;
   }
 }
 

@@ -25,8 +25,7 @@ html {
   position: relative; }
   @media (max-width: 991px) {
     .container {
-      overflow: hidden;
-      max-width: 600px; } }
+      overflow: hidden; } }
 
 a {
   text-decoration: none; }
@@ -781,5 +780,66 @@ a {
     @media (max-width: 991px) {
       .twitter__date {
         width: 220px; } }
+
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px auto 0;
+  max-width: 1200px;
+  opacity: 1;
+  transition: 2s opacity; }
+  .users__content {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    position: relative;
+    margin: 0 20px 40px;
+    width: 250px; }
+  .users__item {
+    align-items: center;
+    display: flex;
+    font-size: .9rem;
+    margin-bottom: 10px; }
+    .users__item--id {
+      font-size: .8rem;
+      margin: 15px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .users__item--user {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  .users__img {
+    width: 100%; }
+  .users__link {
+    color: #550cfb;
+    text-decoration: none;
+    text-indent: 0; }
+    .users__link:hover {
+      text-decoration: underline; }
+  .users__button {
+    align-items: center;
+    background: transparent;
+    border: 2px solid #ccc;
+    bottom: 10px;
+    color: #550cfb;
+    cursor: pointer;
+    display: flex;
+    font-size: .8rem;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10px;
+    text-decoration: none; }
+    .users__button .icon-phone {
+      padding-right: 10px; }
+    .users__button:hover {
+      background: #ccc;
+      color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

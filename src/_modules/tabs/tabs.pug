@@ -9,4 +9,5 @@ mixin interfaceTabs(spec)
             .slide__inner
               .slide__item
                 each item in spec.interfaceTabsImages.interfaceTabsImages
-                  img.slide__img(class=item.css_extra src=`images/${item.image}` alt=item.alt_text)
+                  if (item.id_interface == val.id)
+                    img.slide__img(class=item.css_extra src=`images/${item.image}` alt=item.alt_text)

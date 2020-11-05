@@ -1,10 +1,9 @@
 mixin appsLogos(spec)
-
   each val in spec
     image(class='apps__item' src=val.image alt=val.altText )
-      
   if block
       block
+
 
 mixin heroImage(altText, image, css)
   image(class=css src=image, alt=altText)
