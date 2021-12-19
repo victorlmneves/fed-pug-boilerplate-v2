@@ -12,21 +12,32 @@
 <body><!--[if lt IE 11]>
 <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
 <![endif]--><a name="top"></a>
-  <nav class="menu">
+  <nav
+    class="menu"
+    id="mainnav"
+    role="navigation"
+    aria-labelledby="mainnavheading"
+  >
     <div class="menu__inner">
       <h1 class="menu__logo">
-        <show></show><span class="menu__logo--blue">Trackr</span>
+        <a href="/">
+          <span class="menu__logo--blue">Trackr</span>
+        </a>
       </h1>
       <ul class="menu__topics">
-        <li class="menu__item"><a class="menu__link" href="#">Features</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Features</a>
         </li>
-        <li class="menu__item"><a class="menu__link" href="#">Community</a>
+        <li class="menu__item">
+          <a class="menu__link" href="/users">Community</a>
         </li>
-        <li class="menu__item"><a class="menu__link" href="#">Get started</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Get started</a>
         </li>
       </ul>
       <ul class="menu__login">
-        <li class="menu__item"><a class="menu__link" href="#">Log in</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Log in</a>
         </li>
         <li class="menu__item">
           <button class="button menu__button">Get started</button>
