@@ -1,6 +1,6 @@
 mixin interfaceTabs(spec)
-  nav.tabs
-    ul.tabs__list
+  nav.tabs(id='tabsnav' role='navigation' aria-labelledby="tabsnavheading")
+    ul.tabs__list(id='tabsnavheading')
       each val in spec.interfaceTabs.interfaceTabsOptions
         li.tabs__item
           input(class='tabs__input' type='radio' name="slide" id=val.id checked=val.is_checked)

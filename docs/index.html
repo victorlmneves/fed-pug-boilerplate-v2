@@ -18,7 +18,7 @@
     role="navigation"
     aria-labelledby="mainnavheading"
   >
-    <div class="menu__inner">
+    <div id="mainnavheading" class="menu__inner">
       <h1 class="menu__logo">
         <a href="/">
           <span class="menu__logo--blue">Trackr</span>
@@ -134,8 +134,8 @@
           <h1 class="section__title">Easy-to-use interfaces on every platform</h1>
           <p class="section__text">Since most of our features work in a completely automated way, you will mainly use our apps to discover new TV shows recommended for you and discuss the most interesting episodes with like-minded people.
           </p>
-          <nav class="tabs">
-            <ul class="tabs__list">
+          <nav class="tabs" id="tabsnav" role="navigation" aria-labelledby="tabsnavheading">
+            <ul id="tabsnavheading" class="tabs__list">
               <li class="tabs__item">
                 <input class="tabs__input" type="radio" name="slide" id="slide-01" checked>
                 <label class="tabs__link" for="slide-01">Customized Dashboard</label>
