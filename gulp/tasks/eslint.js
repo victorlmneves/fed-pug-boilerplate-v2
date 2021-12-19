@@ -1,13 +1,12 @@
 /*eslint no-process-exit:0 */
 
-'use strict';
+'use strict'
 
-import path from 'path';
-import gulpif from 'gulp-if';
-import gulp from 'gulp';
-import { plugins, args, config, taskTarget, browserSync } from '../utils';
+import gulpif from 'gulp-if'
+import gulp from 'gulp'
+import { plugins, config, browserSync } from '../utils'
 
-let dirs = config.directories;
+let dirs = config.directories
 
 // ESLint
 gulp.task('eslint', () => {
@@ -31,7 +30,7 @@ gulp.task('eslint', () => {
     .pipe(gulpif(!browserSync.active, plugins.eslint.failAfterError()))
     .on('error', function() {
       if (!browserSync.active) {
-        process.exit(1);
+        process.exit(1)
       }
-    });
-});
+    })
+})

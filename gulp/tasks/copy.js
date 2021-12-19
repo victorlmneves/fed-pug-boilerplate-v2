@@ -2,7 +2,7 @@
 
 import path from 'path';
 import gulp from 'gulp';
-import { plugins, args, config, taskTarget, browserSync } from '../utils';
+import { plugins, config, taskTarget } from '../utils';
 
 let dirs = config.directories;
 let dest = path.join(taskTarget);

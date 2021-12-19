@@ -1,9 +1,10 @@
 mixin menu()
-  nav.menu
+  nav.menu(id='mainnav' role='navigation' aria-labelledby='mainnavheading')
     .menu__inner
       h1.menu__logo
         Show
-        span.menu__logo--blue Trackr
+          a(href='/')
+            span.menu__logo--blue Trackr
       ul.menu__topics
         li.menu__item
           +menuLink('Features', 'menu__link', '#')
@@ -16,4 +17,3 @@ mixin menu()
           +menuLink('Log in', 'menu__link', '#')
         li.menu__item
           +menuButton('Get started', 'menu__button', '#')
-  

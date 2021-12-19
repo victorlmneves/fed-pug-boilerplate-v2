@@ -43,11 +43,9 @@
   }
 
   &__login {
-
     @include mobile {
       flex-grow: 2;
     }
-
     @include display-flex-end();
     @include unstyled-list();
     align-items: center;
@@ -69,7 +67,7 @@
     @include button($blue, $white, $blue-lighter, $white);
     @include button-dropshadow();
     border-radius: 4px;
-    cursor: pointer;;
+    cursor: pointer;
     margin-left: 20px;
     padding: 5px 10px;
   }

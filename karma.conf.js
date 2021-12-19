@@ -1,15 +1,16 @@
 // Karma configuration
 // http://karma-runner.github.io/0.12/config/configuration-file.html
-'use strict';
-var path = require('path');
-var pjson = require('./package.json');
-var config = pjson.config;
-var dirs = config.directories;
-var testFiles = path.join(__dirname, dirs.source) + '/**/*.test.js';
-var preprocessors = {};
-preprocessors[testFiles] = ['browserify'];
-const puppeteer = require('puppeteer');
-process.env.CHROME_BIN = puppeteer.executablePath();
+'use strict'
+
+var path = require('path')
+var pjson = require('./package.json')
+var config = pjson.config
+var dirs = config.directories
+var testFiles = path.join(__dirname, dirs.source) + '/**/*.test.js'
+var preprocessors = {}
+preprocessors[testFiles] = ['browserify']
+const puppeteer = require('puppeteer')
+process.env.CHROME_BIN = puppeteer.executablePath()
 
 var karmaConf = function(config) {
   config.set({
@@ -81,7 +82,7 @@ var karmaConf = function(config) {
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
     singleRun: false
-  });
-};
+  })
+}
 
-module.exports = karmaConf;
+module.exports = karmaConf

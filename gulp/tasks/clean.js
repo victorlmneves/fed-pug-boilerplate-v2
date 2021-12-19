@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
 
-import gulp from 'gulp';
-import { plugins, args, config, taskTarget, browserSync } from '../utils';
-import del from 'del';
+import gulp from 'gulp'
+import { config } from '../utils'
+import del from 'del'
 
-let dirs = config.directories;
+let dirs = config.directories
 
 // Clean
-gulp.task('clean', () => del([dirs.temporary, dirs.destination]));
+gulp.task('clean', () => del([dirs.temporary, dirs.destination]))

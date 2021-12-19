@@ -9,6 +9,8 @@ const requestOptions = {
 
 let heroSection = null
 let appsSection = null
+let interfaceTabs = null
+let interfaceTabsImages = null
 let cards = null
 let carouselConfig = null
 let carouselImages = null
@@ -17,6 +19,7 @@ let twitterSection = null
 let tweets = null
 let socialNetworks = null
 let copyright = null
+
 
 const heroSectionContent = fetch(
   'https://express-api.victorneves.dev/hero_section/',
@@ -38,14 +41,12 @@ const featuresSectionContent = fetch(
 )
   .then((resp) => resp.json())
   .then((res) => {
-    const obj = {
+    return {
       title: res.records[0].title,
       title_css: res.records[0].title_css,
       text: res.records[0].text,
       text_css: res.records[0].text_css
     }
-
-    return obj
   })
   .catch((error) => console.log(JSON.stringify(error)))
 
@@ -73,7 +74,7 @@ const carouselConfigContent = fetch(
 )
   .then((resp) => resp.json())
   .then((res) => {
-    const obj = {
+    return {
       config: {
         mainClass: res.records[0].main_css,
         innerClass: res.records[0].inner_css,
@@ -84,8 +85,6 @@ const carouselConfigContent = fetch(
         nrOfLoops: res.records[0].nr_loops
       }
     }
-
-    return obj
   })
   .catch((error) => console.log(JSON.stringify(error)))
 
@@ -99,11 +98,9 @@ const carouselContent = fetch(
 )
   .then((resp) => resp.json())
   .then((res) => {
-    const obj = {
+    return {
       carousel: res.records,
     }
-
-    return obj
   })
   .catch((error) => console.log(JSON.stringify(error)))
 
@@ -117,15 +114,13 @@ const appsSectionContent = fetch(
 )
   .then((resp) => resp.json())
   .then((res) => {
-    const obj = {
+    return {
       title: res.records[0].title,
       text: {
         __class: res.records[0].text_css,
         text: res.records[0].text
       }
     }
-
-    return obj
   })
   .catch((error) => console.log(JSON.stringify(error)))
 
@@ -139,11 +134,9 @@ const interfaceTabsContent = fetch(
 )
   .then((resp) => resp.json())
   .then((res) => {
-    const obj = {
+    return {
       interfaceTabsOptions: res.records
     }
-
-    return obj
   })
   .catch((error) => console.log(JSON.stringify(error)))
 
@@ -157,11 +150,9 @@ const interfaceTabsImagesContent = fetch(
 )
   .then((resp) => resp.json())
   .then((res) => {
-    const obj = {
+    return {
       interfaceTabsImages: res.records
     }
-
-    return obj
   })
   .catch((error) => console.log(JSON.stringify(error)))
 
@@ -174,11 +165,7 @@ const twitterContent = fetch(
   requestOptions
 )
   .then((resp) => resp.json())
-  .then((res) => {
-    const obj = res.records
-
-    return obj
-  })
+  .then((res) =>  res.records)
   .catch((error) => console.log(JSON.stringify(error)))
 
 twitterContent.then(function (res) {
@@ -190,15 +177,10 @@ const tweetsContent = fetch(
   requestOptions
 )
   .then((resp) => resp.json())
-  .then((res) => {
-    const obj = res.records
-
-    return obj
-  })
+  .then((res) => res.records)
   .catch((error) => console.log(JSON.stringify(error)))
 
 tweetsContent.then(function (res) {
-  console.log("tweets ", res)
   tweets = res
 })
 
@@ -207,11 +189,7 @@ const socialNetworksContent = fetch(
   requestOptions
 )
   .then((resp) => resp.json())
-  .then((res) => {
-    const obj = res.records
-
-    return obj
-  })
+  .then((res) => res.records)
   .catch((error) => console.log(JSON.stringify(error)))
 
 socialNetworksContent.then(function (res) {
@@ -224,12 +202,10 @@ const copyrightContent = fetch(
 )
   .then((resp) => resp.json())
   .then((res) => {
-    const obj = {
+    return {
       __class: res.records[0].css,
       text: res.records[0].text,
     }
-
-    return obj
   })
   .catch((error) => console.log(JSON.stringify(error)))
 

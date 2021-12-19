@@ -37,6 +37,27 @@ block content
                   text: 'Start tracking' 
                 }
               })
+              +form({
+                input: [
+                  {
+                    __class: 'newsletter__input',
+                    __type: 'text',
+                    __name: 'name',
+                    __placeholder: 'Your Name',
+                    label: {
+                      __class: 'newsletter__label',
+                      __for: 'name',
+                      text: 'Your Name' 
+                    }
+                  }
+                ],
+                button: {
+                  __class: 'button newsletter__button',
+                  __type: 'button',
+                  __name: 'button',
+                  text: 'Start tracking' 
+                }
+              })
           .apps
             h3.apps__title Compatible with
             .apps__logos
